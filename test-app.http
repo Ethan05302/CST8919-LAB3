@@ -1,0 +1,29 @@
+### Check if server is running
+GET https://lab3-flask-login-ethan0532.azurewebsites.net/
+
+### Correct login
+POST https://lab3-flask-login-ethan0532.azurewebsites.net/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "password123"
+}
+
+### Failed login
+POST https://lab3-flask-login-ethan0532.azurewebsites.net/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "wrongpass"
+}
+
+### Another failed login
+POST https://lab3-flask-login-ethan0532.azurewebsites.net/login
+Content-Type: application/json
+
+{
+    "username": "user",
+    "password": "badpassword"
+}
